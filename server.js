@@ -50,6 +50,13 @@ app.get('/about', (req, res) => {
   })
 });
 
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    pageTitle: 'Portfolio',
+    welcomeMessage: 'This is the portfolio bish'
+  })
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     error: 'Error sending request son.'
